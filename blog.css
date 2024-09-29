@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;  
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+#container{
+    max-width: 90vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+#header_container{
+    margin-bottom: 2.8rem;
+}
+
+#header_title{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+#header_discription{
+    max-width: 568px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(69, 65, 65);
+    margin: 0 auto;
+}
+
+#main_container{
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: repeat(1,1fr);
+    /* overflow: hidden; */
+}
+
+@media (min-width:850px){
+    #main_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:1300px){
+    #main_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width:1700px){
+    #main_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+
+.card_container{
+    /*important*/
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(211, 206, 206);
+    border-radius: 10px;
+    transition: all 0.2s linear 0s;
+    box-shadow: 1px 1px 8px rgb(59, 56, 56);
+    background-color: #dcdde1;
+    background-image: linear-gradient(160deg, #dcdde1 0%, #e7efe7 100%);
+}
+.card_container:hover{
+    transform: scale(1.03) rotate(0.5deg);
+    transition: all 0.2s linear 0s;
+}
+#card_image_container{
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+}
+
+@media (min-width:700px){
+    #card_image_container{
+        height: 14rem;
+    }
+}
+
+
+#card_image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+.card_titel_container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.card_container:hover .card_image{
+    transform: scale(1.02);
+    transition-duration: 200ms;
+}
+
+.card_title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(70, 67, 67);
+    margin-bottom: 0.3rem;
+}
+
+.card_title_link:hover .card_title{
+    color: rgb(57, 57, 230);
+}
+
+.card_title_para{
+    color: rgb(81, 77, 77);
+    font-size: 1rem;
+}
+
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.author_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.author_avatar_container .author_avatar{
+    height: 1.9rem;
+    width: 1.9rem;
+    overflow: hidden;
+    border: 1px solid rgb(108, 104, 104);
+    border-radius: 3rem;
+    background-color: rgb(240, 235, 235);
+   
+}
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.author_name{
+    color: rgb(103, 103, 236);
+}
+
+.author_date{
+    color: rgb(114, 111, 111);
+}
+
+.card_tag_container{
+    font-size: 1rem;
+    border: 1px solid rgb(119, 115, 115);
+    border-radius: 2px;
+    line-height: 1.2rem;
+    padding: 0.25rem 1rem;
+    font-weight: 600;
+    color: gray;
+   
+}
